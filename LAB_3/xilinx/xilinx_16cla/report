@@ -1,0 +1,118 @@
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : sixteen_lac.ngr
+Top Level Output File Name         : sixteen_lac
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 50
+
+Cell Usage :
+# BELS                             : 44
+#      LUT3                        : 20
+#      LUT4                        : 16
+#      MUXF5                       : 8
+# IO Buffers                       : 50
+#      IBUF                        : 33
+#      OBUF                        : 17
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       20  out of   4656     0%  
+ Number of 4 input LUTs:                 36  out of   9312     0%  
+ Number of IOs:                          50
+ Number of bonded IOBs:                  50  out of    232    21%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 17.938ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 481 / 17
+-------------------------------------------------------------------------
+Delay:               17.938ns (Levels of Logic = 15)
+  Source:            b<1> (PAD)
+  Destination:       c1 (PAD)
+
+  Data Path: b<1> to c1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.651  b_1_IBUF (b_1_IBUF)
+     LUT4:I0->O            1   0.612   0.000  g1/C_2_or00001 (g1/C_2_or0000)
+     MUXF5:I1->O           2   0.278   0.449  g1/C_2_or0000_f5 (g1/C<2>)
+     LUT3:I1->O            2   0.612   0.449  g1/C_3_or00001 (g1/C<3>)
+     LUT3:I1->O            3   0.612   0.451  g1/c11 (c<0>)
+     MUXF5:S->O            2   0.641   0.449  g2/C_2_or0000_f5 (g2/C<2>)
+     LUT3:I1->O            2   0.612   0.449  g2/C_3_or00001 (g2/C<3>)
+     LUT3:I1->O            3   0.612   0.451  g2/c11 (c<1>)
+     MUXF5:S->O            2   0.641   0.449  g3/C_2_or0000_f5 (g3/C<2>)
+     LUT3:I1->O            2   0.612   0.449  g3/C_3_or00001 (g3/C<3>)
+     LUT3:I1->O            3   0.612   0.451  g3/c11 (c<2>)
+     MUXF5:S->O            2   0.641   0.449  g4/C_2_or0000_f5 (g4/C<2>)
+     LUT3:I1->O            2   0.612   0.449  g4/C_3_or00001 (g4/C<3>)
+     LUT3:I1->O            1   0.612   0.357  g4/c11 (c1_OBUF)
+     OBUF:I->O                 3.169          c1_OBUF (c1)
+    ----------------------------------------
+    Total                     17.938ns (11.984ns logic, 5.954ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.39 secs
+ 
+--> 
+
+
+Total memory usage is 533656 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+

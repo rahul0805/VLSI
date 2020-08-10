@@ -1,0 +1,4 @@
+net "Q" = "R4";
+net "D" = "G18";
+net "clk" = "H18";
+net "rst" = "K18";

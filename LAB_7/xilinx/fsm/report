@@ -1,0 +1,165 @@
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : fsm.ngr
+Top Level Output File Name         : fsm
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 12
+#      INV                         : 1
+#      LUT4                        : 8
+#      LUT4_L                      : 3
+# FlipFlops/Latches                : 6
+#      FDC                         : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                        6  out of   4656     0%  
+ Number of Slice Flip Flops:              6  out of   9312     0%  
+ Number of 4 input LUTs:                 12  out of   9312     0%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 6     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst_inv(rst_inv1_INV_0:O)          | NONE(n)                | 6     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 3.771ns (Maximum Frequency: 265.178MHz)
+   Minimum input arrival time before clock: 3.902ns
+   Maximum output required time after clock: 4.063ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.771ns (frequency: 265.178MHz)
+  Total number of paths / destination ports: 31 / 5
+-------------------------------------------------------------------------
+Delay:               3.771ns (Levels of Logic = 3)
+  Source:            state_FSM_FFd4 (FF)
+  Destination:       y (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: state_FSM_FFd4 to y
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.514   0.690  state_FSM_FFd4 (state_FSM_FFd4)
+     LUT4:I0->O            1   0.612   0.360  y_mux000030_SW0 (N13)
+     LUT4_L:I3->LO         1   0.612   0.103  y_mux000030 (y_mux000030)
+     LUT4:I3->O            1   0.612   0.000  y_mux000098 (y_mux0000)
+     FDC:D                     0.268          y
+    ----------------------------------------
+    Total                      3.771ns (2.618ns logic, 1.153ns route)
+                                       (69.4% logic, 30.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 8 / 6
+-------------------------------------------------------------------------
+Offset:              3.902ns (Levels of Logic = 3)
+  Source:            x (PAD)
+  Destination:       y (FF)
+  Destination Clock: clk rising
+
+  Data Path: x to y
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.795  x_IBUF (x_IBUF)
+     LUT4:I0->O            1   0.612   0.509  y_mux00007 (y_mux00007)
+     LUT4:I0->O            1   0.612   0.000  y_mux000098 (y_mux0000)
+     FDC:D                     0.268          y
+    ----------------------------------------
+    Total                      3.902ns (2.598ns logic, 1.304ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.063ns (Levels of Logic = 1)
+  Source:            y (FF)
+  Destination:       y (PAD)
+  Source Clock:      clk rising
+
+  Data Path: y to y
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.514   0.380  y (y_OBUF)
+     OBUF:I->O                 3.169          y_OBUF (y)
+    ----------------------------------------
+    Total                      4.063ns (3.683ns logic, 0.380ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.55 secs
+ 
+--> 
+
+
+Total memory usage is 528792 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+

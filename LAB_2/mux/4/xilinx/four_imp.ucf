@@ -1,0 +1,7 @@
+net "a" loc = "R17";
+net "b" loc = "N17";
+net "c" loc = "L13";
+net "d" loc = "L14";
+net "s1" loc = "K17";
+net "s2" loc = "K18";
+net "o_p" loc = "R4";

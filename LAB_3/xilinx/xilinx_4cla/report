@@ -1,0 +1,109 @@
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : four_lac.ngr
+Top Level Output File Name         : four_lac
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 14
+
+Cell Usage :
+# BELS                             : 11
+#      LUT3                        : 5
+#      LUT4                        : 4
+#      MUXF5                       : 2
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                        5  out of   4656     0%  
+ Number of 4 input LUTs:                  9  out of   9312     0%  
+ Number of IOs:                          14
+ Number of bonded IOBs:                  14  out of    232     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 8.295ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 49 / 5
+-------------------------------------------------------------------------
+Delay:               8.295ns (Levels of Logic = 6)
+  Source:            b<1> (PAD)
+  Destination:       c1 (PAD)
+
+  Data Path: b<1> to c1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.106   0.651  b_1_IBUF (b_1_IBUF)
+     LUT4:I0->O            1   0.612   0.000  C_2_or00001 (C_2_or0000)
+     MUXF5:I1->O           2   0.278   0.449  C_2_or0000_f5 (C<2>)
+     LUT3:I1->O            2   0.612   0.449  C_3_or00001 (C<3>)
+     LUT3:I1->O            1   0.612   0.357  c11 (c1_OBUF)
+     OBUF:I->O                 3.169          c1_OBUF (c1)
+    ----------------------------------------
+    Total                      8.295ns (6.389ns logic, 1.906ns route)
+                                       (77.0% logic, 23.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.51 secs
+ 
+--> 
+
+
+Total memory usage is 517164 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+

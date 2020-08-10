@@ -1,0 +1,5 @@
+net "a" loc= "H13";
+net "b" loc = "E18";
+net "c" loc = "D18";
+net "s" loc = "R4";
+net "c1" loc = "F4"; 

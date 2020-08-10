@@ -1,0 +1,6 @@
+//NET "clk" CLOCK_DEDICATED_ROUTE = FALSE; 
+net "x" loc = "R17";
+//net "rst" loc = "N17";
+net "clk" loc = "B18";
+//net "rst" loc = "D18";
+net "y" loc = "R4";

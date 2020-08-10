@@ -1,0 +1,181 @@
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : shift.ngr
+Top Level Output File Name         : shift
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 22
+#      INV                         : 1
+#      LUT2                        : 17
+#      LUT3                        : 3
+#      LUT4                        : 1
+# FlipFlops/Latches                : 21
+#      FDC                         : 8
+#      FDCP                        : 8
+#      FDE                         : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 9
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       12  out of   4656     0%  
+ Number of Slice Flip Flops:             21  out of   9312     0%  
+ Number of 4 input LUTs:                 22  out of   9312     0%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    232     6%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 8     |
+t1_0_and0000(t1_0_and00001:O)      | NONE(t1_0)             | 1     |
+t1_0_and0001(t1_0_and00011:O)      | NONE(t1_0)             | 1     |
+t1_1_and0000(t1_1_and00001:O)      | NONE(t1_1)             | 1     |
+t1_1_and0001(t1_1_and00011:O)      | NONE(t1_1)             | 1     |
+t1_2_and0000(t1_2_and00001:O)      | NONE(t1_2)             | 1     |
+t1_2_and0001(t1_2_and00011:O)      | NONE(t1_2)             | 1     |
+t1_3_and0000(t1_3_and00001:O)      | NONE(t1_3)             | 1     |
+t1_3_and0001(t1_3_and00011:O)      | NONE(t1_3)             | 1     |
+t2_0_and0000(t2_0_and00001:O)      | NONE(t2_0)             | 1     |
+t2_0_and0001(t2_0_and00011:O)      | NONE(t2_0)             | 1     |
+t2_1_and0000(t2_1_and00001:O)      | NONE(t2_1)             | 1     |
+t2_1_and0001(t2_1_and00011:O)      | NONE(t2_1)             | 1     |
+t2_2_and0000(t2_2_and00001:O)      | NONE(t2_2)             | 1     |
+t2_2_and0001(t2_2_and00011:O)      | NONE(t2_2)             | 1     |
+t2_3_and0000(t2_3_and00001:O)      | NONE(t2_3)             | 1     |
+t2_3_and0001(t2_3_and00011:O)      | NONE(t2_3)             | 1     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 2.649ns (Maximum Frequency: 377.501MHz)
+   Minimum input arrival time before clock: 3.962ns
+   Maximum output required time after clock: 4.040ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.649ns (frequency: 377.501MHz)
+  Total number of paths / destination ports: 43 / 26
+-------------------------------------------------------------------------
+Delay:               2.649ns (Levels of Logic = 1)
+  Source:            i_0 (FF)
+  Destination:       c (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: i_0 to c
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.514   0.502  i_0 (i_0)
+     LUT4:I3->O            5   0.612   0.538  c_and00001 (c_and0000)
+     FDE:CE                    0.483          c
+    ----------------------------------------
+    Total                      2.649ns (1.609ns logic, 1.040ns route)
+                                       (60.7% logic, 39.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.962ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       c (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to c
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   1.106   1.223  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            5   0.612   0.538  c_and00001 (c_and0000)
+     FDE:CE                    0.483          c
+    ----------------------------------------
+    Total                      3.962ns (2.201ns logic, 1.761ns route)
+                                       (55.6% logic, 44.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            c (FF)
+  Destination:       c (PAD)
+  Source Clock:      clk rising
+
+  Data Path: c to c
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.514   0.357  c (c_OBUF)
+     OBUF:I->O                 3.169          c_OBUF (c)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.45 secs
+ 
+--> 
+
+
+Total memory usage is 517484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+

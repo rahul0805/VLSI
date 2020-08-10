@@ -1,0 +1,111 @@
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : wallace.ngr
+Top Level Output File Name         : wallace
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 16
+
+Cell Usage :
+# BELS                             : 32
+#      LUT2                        : 12
+#      LUT3                        : 4
+#      LUT4                        : 16
+# IO Buffers                       : 16
+#      IBUF                        : 8
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                       18  out of   4656     0%  
+ Number of 4 input LUTs:                 32  out of   9312     0%  
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.744ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 320 / 8
+-------------------------------------------------------------------------
+Delay:               11.744ns (Levels of Logic = 8)
+  Source:            x<0> (PAD)
+  Destination:       z<7> (PAD)
+
+  Data Path: x<0> to z<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.106   0.721  x_0_IBUF (x_0_IBUF)
+     LUT2:I0->O            3   0.612   0.603  p2<0>1 (p2<0>)
+     LUT4:I0->O            3   0.612   0.520  g2/c11 (c<1>)
+     LUT4:I1->O            2   0.612   0.532  g9/c1 (c<8>)
+     LUT3:I0->O            2   0.612   0.532  g10/c11 (c<9>)
+     LUT3:I0->O            2   0.612   0.532  g11/c11 (c<10>)
+     LUT4:I0->O            1   0.612   0.357  g12/c11 (z_7_OBUF)
+     OBUF:I->O                 3.169          z_7_OBUF (z<7>)
+    ----------------------------------------
+    Total                     11.744ns (7.947ns logic, 3.797ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.30 secs
+ 
+--> 
+
+
+Total memory usage is 517900 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+
